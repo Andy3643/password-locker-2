@@ -25,3 +25,15 @@ class User:
         method to delete user
         """
         User.user_list.remove(self)
+
+class Credentials:
+    credentials_list = []
+    #create a class for user passwords to be stored
+    def __init__(self,account,username,password):
+        self.account = account
+        self.username = username
+        self.password = password
+
+    def save_credentials(self):
+        Credentials.credentials_list.append(self)
+
