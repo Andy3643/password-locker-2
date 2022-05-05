@@ -11,3 +11,7 @@ def create_new_user (username,password):
 def save_user (user):
     #save created user
     user.save_user()
+
+def show_user():
+    #display the saved user
+    return User.display_user()
