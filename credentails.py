@@ -35,5 +35,9 @@ class Credentials:
         self.password = password
 
     def save_credentials(self):
+        #save user credentials
         Credentials.credentials_list.append(self)
 
+    def delete_credentials (self):
+        #delete user credentials
+        Credentials.credentials_list.remove(self)
