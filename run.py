@@ -61,3 +61,19 @@ def generate_Password():
 
 
 
+#main function
+def main():
+    print("Welcome to Password Locker")
+    print("*" *30)
+    print("Choose short code to continue ;\nTo create an account, use create \nTo login to your account use login \nTo exit, type ex")
+    short_code = input().lower().strip()
+    print("\n")
+
+    
+
+
+
+
+
+ if __name__ == '__main__':
+    main()
