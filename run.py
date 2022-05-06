@@ -119,8 +119,14 @@ def main():
                 print ("Enter password of the account")
                 password = input()
                 
-                while True:
-                    
+                save_credentials(create_new_credential(account,username,password))
+                print('\n')
+                print(f"""Credentials for {account} have been created.
+                The username is :{username}
+                The password is:{password}""")
+                print("\n")
+                
+
                 
 
 
