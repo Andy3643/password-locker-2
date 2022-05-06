@@ -69,7 +69,18 @@ def main():
     short_code = input().lower().strip()
     print("\n")
 
-    
+    if short_code == "create":
+        print ("Add a username")
+        username = input("user_name")
+        while True:
+            print ("""choose to input your password, or let us genearate one for you.
+            Type the following to make a choice:-
+            input  ---to enter your password
+            genpass  ---to let us generate a pasword for you""")
+            user_input = input ().lower().strip()
+            if user_input == "input":
+                print("Enter your preffered password")
+                password = input ()
 
 
 
