@@ -1,5 +1,6 @@
 from requests import delete
 import pyperclip
+import random, string
 
 
 class User:
@@ -68,7 +69,13 @@ class Credentials:
     def copy_credentials (cls,account):
         my_credential = Credentials.find_credential(account)
         pyperclip.copy(my_credential.password)
+
+
+    def createPassword(stringLength=8):
+        #create random  password for user
+        password = string.ascii_uppercase + string.ascii_lowercase + string.digits
+        return ''.join(random.choice(password) for i in range(stringLength))    
     
-    
+
 
     

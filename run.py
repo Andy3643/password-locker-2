@@ -43,9 +43,9 @@ def display_details ():
     return Credentials.display_credentials()
 
 def copy_credentials(account):
-    """
-    A function that copies the credentials using the pyperclip
-    """
+  
+    #A function that copies the credentials using the pyperclip
+   
     return Credentials.copy_credentials(account)
 
 def delete_credential(credentials):
@@ -53,5 +53,11 @@ def delete_credential(credentials):
     #delete a credentials from credentials list
     
     credentials.delete_credentials()
+
+def generate_Password():
+    #create a pasword for the user
+    generated_new_password=Credentials.createPassword()
+    return generated_new_password
+
 
 
