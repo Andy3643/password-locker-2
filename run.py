@@ -31,3 +31,7 @@ def save_credentials(credentials):
 
     #save credentials to the credentials list
     credentials.save_datails()
+
+def display_details ():
+    #display saved credentials
+    return Credentials.display_credentials()

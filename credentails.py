@@ -60,4 +60,8 @@ class Credentials:
             else:
                  return False
 
+    @classmethod
+    def display_credentials (cls):
+        return cls.credentials_list
+
     
