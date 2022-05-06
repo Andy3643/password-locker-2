@@ -33,17 +33,25 @@ def save_credentials(credentials):
     credentials.save_datails()
 
 def find_details(account):
-    """
-    find a credential from the credential list
-    """
+  
+    #find a credential from the credential list
+  
     return Credentials.find_credential(account)
 
 def display_details ():
     #display saved credentials
     return Credentials.display_credentials()
 
+def copy_credentials(account):
+    """
+    A function that copies the credentials using the pyperclip
+    """
+    return Credentials.copy_credentials(account)
+
 def delete_credential(credentials):
-    """
-    delete a credentials from credentials list
-    """
+ 
+    #delete a credentials from credentials list
+    
     credentials.delete_credentials()
+
+
