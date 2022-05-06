@@ -98,7 +98,32 @@ def main():
         login = login_user(username,password)
         if login_user == login:
             print(f"Hello {username}, welcome back to password locker")
-            
+        
+        
+        while True:
+            print('*'*40)
+            print("""
+            Use the following codes 
+            create  ---to create a credential
+            display --- to display existing credentials
+            find    --- to find your credential
+            delete  ---to delete a credential """)
+            short_code = input().lower().strip()
+            if short_code == "create":
+                print ("Create a new credential")
+                print("*"*30)
+                print("Name of account")
+                account = input().lower().strip()
+                print (" enter username for the account")
+                username = input().lower()
+                print ("Enter password of the account")
+                password = input()
+                
+                while True:
+                    
+                
+
+
 
 
  if __name__ == '__main__':
