@@ -41,3 +41,21 @@ class Credentials:
     def delete_credentials (self):
         #delete user credentials
         Credentials.credentials_list.remove(self)
+
+    @classmethod
+    def find_credential(cls,account):
+        #check if credential exist in the credentials list
+        for credentials in cls.credentials_list:
+            if credentials.account == account:
+                return True
+            else:
+                 return False
+
+    @classmethod
+    def user_verification (cls,username,password):
+        #verify the user logins
+        user_login = ""
+        for user in User.user_list:
+            if (User.username == username and User.password == password):
+                user_login == user.username
+                return user_login
