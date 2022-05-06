@@ -125,7 +125,21 @@ def main():
                 The username is :{username}
                 The password is:{password}""")
                 print("\n")
+            
+            elif short_code == "display":
+                if display_details():
+                    print ("This are your accounts")
+                    print ("_"*40)
+                    for account in display_details():
+                        print(f"Account: {account.account}\n Username: {username}\nPassword: {password}")
+                        print("_"*30)
+                else:
+                    print("You have no  credentials left. use the shortcode create to create a credntial")
                 
+            elif short_code == "find":
+                print("Enter name of account you are searching for")
+
+
 
                 
 
