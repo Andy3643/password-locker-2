@@ -138,6 +138,16 @@ def main():
                 
             elif short_code == "find":
                 print("Enter name of account you are searching for")
+                search_account = input().lower()
+                if find_credential(search_account):
+                    search_credential = find_credential(search_account)
+                    print (f"Account name : {search_credential.account}")
+                    print("*"*20)
+                    print(f"Username: {search_credential.username}\nPassword: {search_credential}")
+                    print("*"*20)
+                else :
+                    print ("Credential does not exist")
+                    print("\n")
 
 
 
