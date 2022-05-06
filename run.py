@@ -148,6 +148,19 @@ def main():
                 else :
                     print ("Credential does not exist")
                     print("\n")
+            
+            elif short_code == 'delete':
+                print("Enter the account name of the Credentials you want to delete")
+                search_name = input().lower()
+                if find_credential(search_name):
+                    search_credential = find_credential(search_name)
+                    print("_"*50)
+                    search_credential.delete_credentials()
+                    print('\n')
+                    print(f"The credentials: {search_credential.account}  has been successfully deleted!!!")
+                    print('\n')
+                else:
+                    print("That Credential you want to delete does not exist")
 
 
 
