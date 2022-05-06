@@ -81,6 +81,12 @@ def main():
             if user_input == "input":
                 print("Enter your preffered password")
                 password = input ()
+                break
+            elif user_input == "genpass":
+                password = generate_Password()
+                break
+            else:
+                print("Please enter a password to continue")
 
 
 
