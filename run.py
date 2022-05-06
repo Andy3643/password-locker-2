@@ -32,6 +32,18 @@ def save_credentials(credentials):
     #save credentials to the credentials list
     credentials.save_datails()
 
+def find_details(account):
+    """
+    find a credential from the credential list
+    """
+    return Credentials.find_credential(account)
+
 def display_details ():
     #display saved credentials
     return Credentials.display_credentials()
+
+def delete_credential(credentials):
+    """
+    delete a credentials from credentials list
+    """
+    credentials.delete_credentials()

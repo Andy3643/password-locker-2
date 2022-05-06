@@ -64,4 +64,11 @@ class Credentials:
     def display_credentials (cls):
         return cls.credentials_list
 
+    @classmethod
+    def copy_credentials (cls,account):
+        my_credential = Credentials.find_credential(account)
+        pyperclip.copy(my_credential.password)
+    
+    
+
     
