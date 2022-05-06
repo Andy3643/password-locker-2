@@ -1,4 +1,4 @@
-from credentails import User
+from credentails import User,Credentials
 
 
 def create_new_user (username,password):
@@ -15,3 +15,8 @@ def save_user (user):
 def show_user():
     #display the saved user
     return User.display_user()
+
+def login_user (username,password):
+    #allow user to login
+    check_user = Credentials.user_verification(username,password)
+    return check_user

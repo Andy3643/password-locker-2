@@ -26,6 +26,15 @@ class User:
         """
         User.user_list.remove(self)
 
+    @classmethod
+    def user_verification (cls,username,password):
+        #verify the user logins
+        user_login = ""
+        for user in User.user_list:
+            if (User.username == username and User.password == password):
+                user_login == user.username
+                return user_login
+
 class Credentials:
     credentials_list = []
     #create a class for user passwords to be stored
@@ -51,11 +60,4 @@ class Credentials:
             else:
                  return False
 
-    @classmethod
-    def user_verification (cls,username,password):
-        #verify the user logins
-        user_login = ""
-        for user in User.user_list:
-            if (User.username == username and User.password == password):
-                user_login == user.username
-                return user_login
+    
