@@ -87,9 +87,18 @@ def main():
                 break
             else:
                 print("Please enter a password to continue")
-
-
-
+        save_user (create_new_user(username,password))
+        print('*'*40)
+        print(f"{username} welcome to password locker.Your password is : {password}")
+        print('*'*40)
+    elif short_code =="login":
+        print("Please enter your Username and Password")
+        username= input("username")
+        password = input("password")
+        login = login_user(username,password)
+        if login_user == login:
+            print(f"Hello {username}, welcome back to password locker")
+            
 
 
  if __name__ == '__main__':
