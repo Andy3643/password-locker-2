@@ -161,7 +161,11 @@ def main():
                     print('\n')
                 else:
                     print("That Credential you want to delete does not exist")
-
+    elif short_code == 'exit':
+        print("You have Exited The APP!!!\n Thank you for using the App")
+        break
+    else:
+            print("Wrong Code")
 
 
                 
