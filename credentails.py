@@ -1,3 +1,4 @@
+from venv import create
 from requests import delete
 import pyperclip
 import random, string
@@ -51,6 +52,15 @@ class Credentials:
     def delete_credentials (self):
         #delete user credentials
         Credentials.credentials_list.remove(self)
+
+    
+    @classmethod
+    def find_credential(cls,account):
+        #check if credential exist in the credentials list
+        for credential in cls.credentials_list:
+            if credential.account == account:
+                return credential
+            
 
     @classmethod
     def find_credential(cls,account):

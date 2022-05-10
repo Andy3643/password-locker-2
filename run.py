@@ -32,7 +32,7 @@ def save_credentials(credentials):
     #save credentials to the credentials list
     credentials.save_datails()
 
-def find_details(account):
+def find_credential(account):
   
     #find a credential from the credential list
   
@@ -65,7 +65,7 @@ def generate_Password():
 def main():
     print("Welcome to Password Locker")
     print("*" *30)
-    print("Choose short code to continue ;\nTo create an account, use create \nTo login to your account use login \nTo exit, type ex")
+    print("Choose short code to continue ;\nTo create an account, use create \nTo login to your account use login \nTo exit, type exit")
     short_code = input().lower().strip()
     print("\n")
 
@@ -90,14 +90,16 @@ def main():
         save_user (create_new_user(username,password))
         print('*'*40)
         print(f"{username} welcome to password locker.Your password is : {password}")
+        
         print('*'*40)
-    elif short_code =="login":
-        print("Please enter your Username and Password")
-        username= input("username")
-        password = input("password")
-        login = login_user(username,password)
-        if login_user == login:
-            print(f"Hello {username}, welcome back to password locker")
+        
+    # elif short_code =="login":
+    #     print("Please enter your Username and Password")
+    #     username= input("username")
+    #     password = input("password")
+    #     login = login_user(username,password)
+    #     if login_user == login:
+    #         print(f"Hello {username}, welcome back to password locker")
         
         
         while True:
@@ -151,9 +153,9 @@ def main():
             
             elif short_code == 'delete':
                 print("Enter the account name of the Credentials you want to delete")
-                search_name = input().lower()
-                if find_credential(search_name):
-                    search_credential = find_credential(search_name)
+                search_username = input().lower()
+                if find_credential(search_username):
+                    search_credential = find_credential(search_username)
                     print("_"*50)
                     search_credential.delete_credentials()
                     print('\n')
@@ -161,11 +163,18 @@ def main():
                     print('\n')
                 else:
                     print("That Credential you want to delete does not exist")
-    elif short_code == 'exit':
+    
+    elif short_code == "exit":
         print("You have Exited The APP!!!\n Thank you for using the App")
-        break
+        return
+    # elif short_code =='exit':
+
+    #     print("You have Exited The APP!!!\n Thank you for using the App")
+    #     break
     else:
-            print("Wrong Code")
+        print("Wrong Code")
+# else :
+#     print("leave")        
 
 
                 
@@ -173,5 +182,5 @@ def main():
 
 
 
- if __name__ == '__main__':
+if __name__ == '__main__':
     main()
